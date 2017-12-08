@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>originalWelcomeScreen.PNG</file>
+        <file>smileImoji.png</file>
+    </qresource>
+    <qresource prefix="/gif">
+        <file>tictacGIF.gif</file>
+        <file>giphycongradulations.gif</file>
+    </qresource>
+</RCC>
