@@ -1,4 +1,4 @@
-//#include "mainmenu.h"
+
 #include <QApplication>
 #include <QSplashScreen>
 #include<QTimer>

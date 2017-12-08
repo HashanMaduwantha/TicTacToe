@@ -22,9 +22,7 @@ MainMenu::~MainMenu()
 
 void MainMenu::on_PlayButton_clicked()
 {
-    //QuickPlayScreen=new TicTacScreen();
-    //QuickPlayScreen->show();
-    game->tictacscreen->show();
+
 }
 
 void MainMenu::MainMenuGif()
@@ -36,4 +34,9 @@ void MainMenu::MainMenuGif()
 
 
 
+}
+
+void MainMenu::on_PlayGameButton_clicked()
+{
+    game->tictacscreen->show();
 }

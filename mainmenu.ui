@@ -21,7 +21,16 @@
     <item row="0" column="4" rowspan="2" colspan="2">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QPushButton" name="PlayButton">
+       <widget class="QPushButton" name="PlayGameButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color:red;
 
@@ -29,7 +38,7 @@ width:140px;
 height:30px;</string>
         </property>
         <property name="text">
-         <string>Play Tic Tac Toe</string>
+         <string>Play Game</string>
         </property>
        </widget>
       </item>

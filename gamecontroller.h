@@ -11,12 +11,13 @@ class GameController
 public:
     GameController();
     TicTacScreen *tictacscreen;
+    WinnerScreen *winnerscreen;
     void Start();
 
 private:
     MainMenu *mainmenuScreen;
 
-    WinnerScreen *winnerscreen;
+
 
 };
 

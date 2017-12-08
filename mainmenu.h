@@ -28,9 +28,11 @@ public:
 private slots:
 
 
+    void on_PlayGameButton_clicked();
+
 private:
     Ui::MainMenu *ui;
-    //TicTacScreen *QuickPlayScreen;
+
 
 
 
