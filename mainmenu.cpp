@@ -39,4 +39,5 @@ void MainMenu::MainMenuGif()
 void MainMenu::on_PlayGameButton_clicked()
 {
     game->tictacscreen->show();
+    game->tictacscreen->getPlayerName();
 }
