@@ -9,6 +9,8 @@ void GameController::Start()
 {
     mainmenuScreen = new MainMenu();
     tictacscreen = new TicTacScreen();
+    winnerscreen = new WinnerScreen();
+
     mainmenuScreen->show();
 
 

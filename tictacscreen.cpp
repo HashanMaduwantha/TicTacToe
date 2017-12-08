@@ -2,6 +2,10 @@
 #include "ui_tictacscreen.h"
 
 #include <QInputDialog>
+#include "gamecontroller.h"
+
+extern GameController *game;
+
 
 TicTacScreen::TicTacScreen(QWidget *parent) :
     QWidget(parent),
@@ -207,7 +211,7 @@ void TicTacScreen::ResetGame()
 
 void TicTacScreen::winner()
 {
-    //WinScreen=new WinnerScreen();
+    game->winnerscreen->show();
     //if(PlayerOneCount>PlayerTwoCount)
     //
 
