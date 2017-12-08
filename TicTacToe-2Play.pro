@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainmenu.cpp \
     tictacscreen.cpp \
-    winnerscreen.cpp
+    winnerscreen.cpp \
+    gamecontroller.cpp
 
 HEADERS  += mainmenu.h \
     tictacscreen.h \
-    winnerscreen.h
+    winnerscreen.h \
+    gamecontroller.h
 
 FORMS    += mainmenu.ui \
     tictacscreen.ui \

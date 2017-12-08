@@ -25,3 +25,4 @@ void WinnerScreen::WinnerGIF()
     //tictac->PlayerOne;
     //ui->LabelWinPlayer->setText();
 }
+

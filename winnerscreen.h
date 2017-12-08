@@ -22,6 +22,9 @@ public:
 private:
     Ui::WinnerScreen *ui;
 
+    QString WinnerName;
+
+
     QMovie *Cmovie;
     //TicTacScreen *tictac;
 

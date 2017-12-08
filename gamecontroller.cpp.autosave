@@ -1,0 +1,13 @@
+#include "gamecontroller.h"
+
+GameController::GameController()
+{
+    Start();
+}
+
+void GameController::Start()
+{
+    mainmenuScreen = new MainMenu();
+    
+}
+
