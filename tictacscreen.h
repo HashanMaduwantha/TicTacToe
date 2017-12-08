@@ -8,7 +8,7 @@
 #include <QPixmap>
 #include <QInputDialog>
 
-#include "winnerscreen.h"
+//#include "winnerscreen.h"
 
 namespace Ui {
 class TicTacScreen;
@@ -42,7 +42,7 @@ public:
 
 private:
     Ui::TicTacScreen *ui;
-    WinnerScreen *WinScreen;
+    //WinnerScreen *WinScreen;
     void winner();
 
 protected:

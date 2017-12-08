@@ -8,7 +8,8 @@
 #include <QBitmap>
 #include <QIcon>
 
-#include "tictacscreen.h"
+
+//#include "tictacscreen.h"
 
 namespace Ui {
 class MainMenu;
@@ -22,14 +23,16 @@ public:
     explicit MainMenu(QWidget *parent = 0);
     ~MainMenu();
 
-private slots:
+    void MainMenuGif();
     void on_PlayButton_clicked();
+private slots:
+
 
 private:
     Ui::MainMenu *ui;
-    TicTacScreen *QuickPlayScreen;
+    //TicTacScreen *QuickPlayScreen;
 
-    void MainMenuGif();
+
 
     QMovie *movie;
 

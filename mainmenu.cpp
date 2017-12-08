@@ -1,7 +1,9 @@
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
 
+#include "gamecontroller.h"
 
+extern GameController *game;
 
 MainMenu::MainMenu(QWidget *parent) :
     QMainWindow(parent),
@@ -20,9 +22,9 @@ MainMenu::~MainMenu()
 
 void MainMenu::on_PlayButton_clicked()
 {
-    QuickPlayScreen=new TicTacScreen();
-    QuickPlayScreen->show();
-
+    //QuickPlayScreen=new TicTacScreen();
+    //QuickPlayScreen->show();
+    game->tictacscreen->show();
 }
 
 void MainMenu::MainMenuGif()
@@ -31,5 +33,7 @@ void MainMenu::MainMenuGif()
     movie=new QMovie(":/gif/tictacGIF.gif");
     ui->gifLabel->setMovie(movie);
     movie->start();
+
+
 
 }

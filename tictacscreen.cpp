@@ -16,8 +16,7 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     PlayerTwo="Player Two";
     PlayerOneCount=0;
     PlayerTwoCount=0;
-    getPlayerName();
-
+    //getPlayerName();
 }
 
 TicTacScreen::~TicTacScreen()
@@ -208,11 +207,11 @@ void TicTacScreen::ResetGame()
 
 void TicTacScreen::winner()
 {
-    WinScreen=new WinnerScreen();
+    //WinScreen=new WinnerScreen();
     //if(PlayerOneCount>PlayerTwoCount)
     //
 
-    WinScreen->show();
+    //WinScreen->show();
 }
 
 void TicTacScreen::on_Button1_clicked()
