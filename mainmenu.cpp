@@ -15,7 +15,7 @@ MainMenu::MainMenu(QWidget *parent) :
 
 MainMenu::~MainMenu()
 {
-    delete ui;
+    delete ui; // stashing
 }
 
 void MainMenu::on_PlayButton_clicked()
