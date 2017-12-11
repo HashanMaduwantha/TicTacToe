@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
 
     //MainMenu w;
 
-    //QTimer::singleShot(2500,splash,SLOT(close()));
-    //QTimer::singleShot(2500,&game,SLOT(show()));
+//    QTimer::singleShot(2500,splash,SLOT(close()));
+//    QTimer::singleShot(2500,&game,SLOT(show()));
 
 
 

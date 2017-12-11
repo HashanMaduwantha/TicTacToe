@@ -23,11 +23,8 @@
    <string notr="true">background-color:#00ff80;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <property name="horizontalSpacing">
+   <property name="spacing">
     <number>1</number>
-   </property>
-   <property name="verticalSpacing">
-    <number>0</number>
    </property>
    <item row="2" column="4">
     <layout class="QVBoxLayout" name="verticalLayout_3"/>
@@ -45,6 +42,11 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 25px;
+background-color:red;
+</string>
+       </property>
        <property name="text">
         <string>New Screen</string>
        </property>
@@ -57,6 +59,11 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-radius: 25px;
+background-color:red;
+</string>
        </property>
        <property name="text">
         <string>Reset Screen</string>

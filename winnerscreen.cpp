@@ -20,10 +20,10 @@ WinnerScreen::~WinnerScreen()
     delete ui;
 }
 
-void WinnerScreen::AddingWinner()
+void WinnerScreen::AddingWinner(QString winner)
 {
 
-    ui->LabelWinPlayer->setText(game->tictacscreen->getWinnerPlayer());
+    ui->LabelWinPlayer->setText(winner);
     //game->tictacscreen->getWinnerName()
 }
 

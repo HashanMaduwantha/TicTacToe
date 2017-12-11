@@ -3,6 +3,7 @@
 
 #include <QInputDialog>
 #include "gamecontroller.h"
+#include <QDebug>
 
 extern GameController *game;
 
@@ -19,6 +20,8 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     PlayerTwo="Player Two";
     PlayerOneCount=0;
     PlayerTwoCount=0;
+
+
 
 }
 
@@ -102,10 +105,18 @@ void TicTacScreen::getPlayerName()
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
     setPlayerTwo(b);
 
+    qDebug() << a;
+    qDebug() << b;
+
+
     if(PlayerOne=="")
     {    setPlayerOne("Player One"); }
     if(PlayerTwo=="")
     {   setPlayerTwo("Player Two");  }
+
+    PlayerOne = a;
+    PlayerTwo = b;
+
 
     ui->labelPlayerOneScore->setText(getPlayerOne());
 
@@ -225,18 +236,24 @@ void TicTacScreen::setScore()
     if(PlayerOneCount>PlayerTwoCount)
     {  //winner is PlayerOne
 
-        setWinnerPlayer(getPlayerOne());
+        WinnerPlayer = PlayerOne;
+        qDebug() << "inside tictacscreen";
+        qDebug() << WinnerPlayer;
+
     }
     else
     { //winner is PlayerTwo
 
-        setWinnerPlayer(getPlayerTwo());
+        WinnerPlayer = PlayerTwo;
     }
 
 }
 
 void TicTacScreen::Owin()
 {
+    WinnerPlayer = PlayerTwo;
+    qDebug() << "Winner player Owin is";
+    qDebug() << WinnerPlayer;
     winner();
     PlayerOneCount++;
     ResetGame();
@@ -245,6 +262,9 @@ void TicTacScreen::Owin()
 
 void TicTacScreen::Xwin()
 {
+    qDebug() << "Winner player Xwin is";
+    qDebug() << WinnerPlayer;
+    WinnerPlayer = PlayerOne;
     winner();
     PlayerTwoCount++;
     ResetGame();
@@ -293,6 +313,7 @@ void TicTacScreen::ResetGame()
 
 void TicTacScreen::winner()
 {
+    game->winnerscreen->AddingWinner(WinnerPlayer);
     game->winnerscreen->show();
 
 
@@ -507,6 +528,7 @@ void TicTacScreen::on_Button9_clicked()
 
 void TicTacScreen::on_ResetButton_clicked()
 {
+
     ResetGame();
 }
 

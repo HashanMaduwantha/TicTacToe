@@ -14,15 +14,7 @@
    <string>MainMenu</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:white;
-QpushButton
-{ 	border-style:solid; }
-
-
-QPushButton:hover{
-color:#ccc;
-Background-color:blue;
-}</string>
+   <string notr="true">background-color:white;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -39,19 +31,15 @@ Background-color:blue;
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="mouseTracking">
-         <bool>true</bool>
-        </property>
         <property name="styleSheet">
          <string notr="true">background-color:red;
 border-radius: 8px;
 width:140px;
 height:30px;
-
-PlayGameButton::hover{ color :white; }</string>
+hover { color: white };</string>
         </property>
         <property name="text">
-         <string>Play</string>
+         <string>Play Game</string>
         </property>
        </widget>
       </item>
