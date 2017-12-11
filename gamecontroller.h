@@ -5,6 +5,7 @@
 #include "tictacscreen.h"
 #include "winnerscreen.h"
 
+//#include <QMovie>
 
 class GameController
 {
@@ -12,10 +13,13 @@ public:
     GameController();
     TicTacScreen *tictacscreen;
     WinnerScreen *winnerscreen;
+
+//    QMovie *movie;
     void Start();
 
 private:
     MainMenu *mainmenuScreen;
+
 
 
 

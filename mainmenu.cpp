@@ -17,13 +17,13 @@ MainMenu::MainMenu(QWidget *parent) :
 
 MainMenu::~MainMenu()
 {
-    delete ui; // stashing
+    delete ui;
 }
 
-void MainMenu::on_PlayButton_clicked()
-{
+//void MainMenu::on_PlayButton_clicked()
+//{
 
-}
+//}
 
 void MainMenu::MainMenuGif()
 {

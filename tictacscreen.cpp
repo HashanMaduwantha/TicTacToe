@@ -6,7 +6,6 @@
 
 extern GameController *game;
 
-
 TicTacScreen::TicTacScreen(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TicTacScreen)
@@ -20,7 +19,7 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     PlayerTwo="Player Two";
     PlayerOneCount=0;
     PlayerTwoCount=0;
-    //getPlayerName();
+
 }
 
 TicTacScreen::~TicTacScreen()
@@ -28,32 +27,99 @@ TicTacScreen::~TicTacScreen()
     delete ui;
 }
 
+qint8 TicTacScreen::getPlayerTwoCount() const
+{
+    return PlayerTwoCount;
+}
+
+void TicTacScreen::setPlayerTwoCount(const qint8 &value)
+{
+    PlayerTwoCount = value;
+}
+
+qint8 TicTacScreen::getPlayerOneCount() const
+{
+    return PlayerOneCount;
+}
+
+void TicTacScreen::setPlayerOneCount(const qint8 &value)
+{
+    PlayerOneCount = value;
+}
+
+void TicTacScreen::setPlayerTwo(const QString &value)
+{
+    PlayerTwo = value;
+}
+
+void TicTacScreen::setPlayerOne(const QString &value)
+{
+    PlayerOne = value;
+}
+
+QString TicTacScreen::getPlayerTwo() const
+{
+    return PlayerTwo;
+}
+
+QString TicTacScreen::getPlayerOne() const
+{
+    return PlayerOne;
+}
+
+QString TicTacScreen::getWhoseTurn() const
+{
+    return whoseTurn;
+}
+
+void TicTacScreen::setWhoseTurn(const QString &value)
+{
+    whoseTurn = value;
+}
+
+QString TicTacScreen::getWinnerPlayer() const
+{
+    return WinnerPlayer;
+}
+
+void TicTacScreen::setWinnerPlayer(const QString &value)
+{
+    WinnerPlayer = value;
+}
+
+
+
 void TicTacScreen::getPlayerName()
 {
     bool ok;
-    PlayerOne=QInputDialog::getText(this,tr("Name Please"),tr("Player One Name:"),
+    QString a=QInputDialog::getText(this,tr("Name Please"),tr("Player One Name:"),
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
-    PlayerTwo=QInputDialog::getText(this,tr("Name Please"),tr("Player Two Name:"),
+    setPlayerOne(a);
+    QString b=QInputDialog::getText(this,tr("Name Please"),tr("Player Two Name:"),
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
+    setPlayerTwo(b);
+
     if(PlayerOne=="")
-    {    PlayerOne="Player One";}
+    {    setPlayerOne("Player One"); }
     if(PlayerTwo=="")
-    {   PlayerTwo="Player Two"; }
+    {   setPlayerTwo("Player Two");  }
 
-    ui->labelPlayerOneScore->setText(PlayerOne);
+    ui->labelPlayerOneScore->setText(getPlayerOne());
 
-    ui->labelPlayerTwoScore->setText(PlayerTwo);
+    ui->labelPlayerTwoScore->setText(getPlayerTwo());
 }
 
 void TicTacScreen::DetermineWhoseTurn()
 {
     if(whoseTurn=="X")
     {
-        whoseTurn="O";
+
+        setWhoseTurn("O");
     }
     else
     {
-        whoseTurn="X";
+
+        setWhoseTurn("X");
     }
 }
 
@@ -146,12 +212,23 @@ void TicTacScreen::DetermineIfWin()
 
 void TicTacScreen::setScore()
 {
-    ui->labelPlayerOneScore->setText(PlayerOne);
+    ui->labelPlayerOneScore->setText(getPlayerOne());
 
-    ui->labelPlayerTwoScore->setText(PlayerTwo);
+    ui->labelPlayerTwoScore->setText(getPlayerTwo());
 
-    ui->PlayerOnelcdNumber->display(PlayerOneCount);
-    ui->PlayerTwolcdNumber->display(PlayerTwoCount);
+    ui->PlayerOnelcdNumber->display(getPlayerOneCount());
+    ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
+
+    if(PlayerOneCount>PlayerTwoCount)
+    {  //winner is PlayerOne
+
+        setWinnerPlayer(getPlayerOne());
+    }
+    else
+    { //winner is PlayerTwo
+
+        setWinnerPlayer(getPlayerTwo());
+    }
 
 }
 
@@ -209,18 +286,18 @@ void TicTacScreen::ResetGame()
     setScore();
 }
 
+
+
 void TicTacScreen::winner()
 {
     game->winnerscreen->show();
-    //if(PlayerOneCount>PlayerTwoCount)
-    //
 
-    //WinScreen->show();
+
 }
 
 void TicTacScreen::on_Button1_clicked()
 {
-    ui->Button1->setText(whoseTurn);
+    ui->Button1->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -243,7 +320,7 @@ void TicTacScreen::on_Button1_clicked()
 
 void TicTacScreen::on_Button2_clicked()
 {
-    ui->Button2->setText(whoseTurn);
+    ui->Button2->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -266,7 +343,7 @@ void TicTacScreen::on_Button2_clicked()
 
 void TicTacScreen::on_Button3_clicked()
 {
-    ui->Button3->setText(whoseTurn);
+    ui->Button3->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -289,7 +366,7 @@ void TicTacScreen::on_Button3_clicked()
 
 void TicTacScreen::on_Button4_clicked()
 {
-    ui->Button4->setText(whoseTurn);
+    ui->Button4->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -312,7 +389,7 @@ void TicTacScreen::on_Button4_clicked()
 
 void TicTacScreen::on_Button5_clicked()
 {
-    ui->Button5->setText(whoseTurn);
+    ui->Button5->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -335,7 +412,7 @@ void TicTacScreen::on_Button5_clicked()
 
 void TicTacScreen::on_Button6_clicked()
 {
-    ui->Button6->setText(whoseTurn);
+    ui->Button6->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -358,7 +435,7 @@ void TicTacScreen::on_Button6_clicked()
 
 void TicTacScreen::on_Button7_clicked()
 {
-    ui->Button7->setText(whoseTurn);
+    ui->Button7->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -381,7 +458,7 @@ void TicTacScreen::on_Button7_clicked()
 
 void TicTacScreen::on_Button8_clicked()
 {
-    ui->Button8->setText(whoseTurn);
+    ui->Button8->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -404,7 +481,7 @@ void TicTacScreen::on_Button8_clicked()
 
 void TicTacScreen::on_Button9_clicked()
 {
-    ui->Button9->setText(whoseTurn);
+    ui->Button9->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
@@ -432,15 +509,22 @@ void TicTacScreen::on_ResetButton_clicked()
 
 void TicTacScreen::on_NewGameButton_clicked()
 {
-    PlayerOne="";
-    PlayerTwo="";
-    PlayerOneCount=0;
-    PlayerTwoCount=0;
-    ui->labelPlayerOneScore->setText(PlayerOne);
+    ui->Button1->setText("");
+    ui->Button2->setText("");
+    ui->Button3->setText("");
+    ui->Button4->setText("");
+    ui->Button5->setText("");
+    ui->Button6->setText("");
+    ui->Button7->setText("");
+    ui->Button8->setText("");
+    ui->Button9->setText("");
 
-    ui->labelPlayerTwoScore->setText(PlayerTwo);
 
-    ui->PlayerOnelcdNumber->display(PlayerOneCount);
-    ui->PlayerTwolcdNumber->display(PlayerTwoCount);
+
+    setPlayerOneCount(0);
+    setPlayerTwoCount(0);
+
+    ui->PlayerOnelcdNumber->display(getPlayerOneCount());
+    ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
     getPlayerName();
 }

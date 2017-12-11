@@ -2,7 +2,7 @@
 #include "ui_winnerscreen.h"
 
 #include "gamecontroller.h"
-#include <QString>
+
 extern GameController *game;
 
 
@@ -12,7 +12,6 @@ WinnerScreen::WinnerScreen(QWidget *parent) :
 {
     ui->setupUi(this);
     WinnerGIF();
-   // connect(game->tictacscreen,SIGNAL(setWinName()),this,SLOT(AddingWinner()));
 }
 
 WinnerScreen::~WinnerScreen()
@@ -22,15 +21,14 @@ WinnerScreen::~WinnerScreen()
 
 void WinnerScreen::AddingWinner()
 {
-
-    ui->LabelWinPlayer->setText(game->tictacscreen->getWinnerPlayer());
-    //game->tictacscreen->getWinnerName()
+    //QString winName = d ;
+    ui->LabelWinPlayer->setText(game->tictacscreen->setWinName(););
 }
 
 void WinnerScreen::WinnerGIF()
 {
     Cmovie=new QMovie(":/gif/giphycongradulations.gif");
-    Cmovie->setScaledSize(QSize(375,200));
+    Cmovie->setScaledSize(QSize(280,200));
     ui->labelCongradulations->setMovie(Cmovie);
     Cmovie->start();
 

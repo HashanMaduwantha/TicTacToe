@@ -9,7 +9,7 @@
 #include <QIcon>
 
 
-//#include "tictacscreen.h"
+
 
 namespace Ui {
 class MainMenu;
@@ -24,7 +24,7 @@ public:
     ~MainMenu();
 
     void MainMenuGif();
-    void on_PlayButton_clicked();
+//    void on_PlayButton_clicked();
 private slots:
 
 

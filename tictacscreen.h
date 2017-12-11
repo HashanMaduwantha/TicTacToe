@@ -7,8 +7,9 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QInputDialog>
+#include <QString>
 
-//#include "winnerscreen.h"
+
 
 namespace Ui {
 class TicTacScreen;
@@ -23,12 +24,12 @@ public:
     ~TicTacScreen();
 
     QString whoseTurn;
-    qint8 result;
+    //qint8 result;
     QString PlayerOne;
     QString PlayerTwo;
     qint8 PlayerOneCount;
     qint8 PlayerTwoCount;
-
+    QString WinnerPlayer;
 
     void getPlayerName();
     void DetermineWhoseTurn();
@@ -40,10 +41,38 @@ public:
     void TieGame();
     void ResetGame();
 
+    QString getWinnerPlayer() const;
+    void setWinnerPlayer(const QString &value);
+
+    void setWhoseTurn(const QString &value);
+
+    QString getWhoseTurn() const;
+
+    QString getPlayerOne() const;
+
+    QString getPlayerTwo() const;
+
+    void setPlayerOne(const QString &value);
+
+    void setPlayerTwo(const QString &value);
+
+    void setPlayerOneCount(const qint8 &value);
+
+    qint8 getPlayerOneCount() const;
+
+    qint8 getPlayerTwoCount() const;
+    void setPlayerTwoCount(const qint8 &value);
+
+signals:
+
+    void setWinPlayer(QString a);
+
+
 private:
     Ui::TicTacScreen *ui;
-    //WinnerScreen *WinScreen;
+
     void winner();
+
 
 protected:
     //void paintEvent(QPaintEvent *e);

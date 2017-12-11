@@ -10,10 +10,6 @@ void GameController::Start()
     mainmenuScreen = new MainMenu();
     tictacscreen = new TicTacScreen();
     winnerscreen = new WinnerScreen();
-//
-//    movie = new QMovie(":/gif/tictacGIF.gif");
-//
-
 
     mainmenuScreen->show();
     winnerscreen->AddingWinner();

@@ -19,10 +19,13 @@ public:
     explicit WinnerScreen(QWidget *parent = 0);
     ~WinnerScreen();
 
+public slots:
+    void AddingWinner();
+
 private:
     Ui::WinnerScreen *ui;
 
-    QString WinnerName;
+
 
 
     QMovie *Cmovie;
