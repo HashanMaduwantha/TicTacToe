@@ -34,6 +34,10 @@ void WinnerScreen::WinnerGIF()
     ui->labelCongradulations->setMovie(Cmovie);
     Cmovie->start();
 
+//    game->Cmovie->setScaledSize(QSize(375,200));
+//    ui->labelCongradulations->setMovie(game->Cmovie);
+//    game->Cmovie->start();
+
     //tictac=new TicTacSceen();
     //tictac->PlayerOne;
     //ui->LabelWinPlayer->setText();

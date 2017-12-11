@@ -11,14 +11,16 @@ class GameController
 {
 public:
     GameController();
+    MainMenu *mainmenuScreen;
     TicTacScreen *tictacscreen;
     WinnerScreen *winnerscreen;
 
 //    QMovie *movie;
+
     void Start();
 
 private:
-    MainMenu *mainmenuScreen;
+
 
 
 

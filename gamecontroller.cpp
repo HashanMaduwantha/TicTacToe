@@ -1,5 +1,9 @@
 #include "gamecontroller.h"
 
+//#include <QSplashScreen>
+//#include<QTimer>
+//#include <QMovie>
+
 GameController::GameController()
 {
    // Start();
@@ -7,13 +11,20 @@ GameController::GameController()
 
 void GameController::Start()
 {
+//    QSplashScreen *splash=new QSplashScreen;
+//        splash->setPixmap(QPixmap(":/images/originalWelcomeScreen.PNG"));
+//        splash->show();
+//        QTimer::singleShot(2500,splash,SLOT(close()));
+        //QTimer::singleShot(2500,,SLOT(show()));
+
+
+
     mainmenuScreen = new MainMenu();
     tictacscreen = new TicTacScreen();
     winnerscreen = new WinnerScreen();
 //
 //    movie = new QMovie(":/gif/tictacGIF.gif");
 //
-
 
     mainmenuScreen->show();
     winnerscreen->AddingWinner();

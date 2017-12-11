@@ -25,6 +25,9 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
 TicTacScreen::~TicTacScreen()
 {
     delete ui;
+    //connect(game->tictacscreen,SIGNAL(destroyed(QObject*)),game->mainmenuScreen,SLOT(close()));
+    //qApp->quit();
+    //QCoreApplication::quit();
 }
 
 qint8 TicTacScreen::getPlayerTwoCount() const
