@@ -34,6 +34,7 @@ void MainMenu::MainMenuGif()
 void MainMenu::on_PlayGameButton_clicked()
 {
     game->tictacscreen->show();
+    delete game->mainmenuScreen;/*game->mainmenuScreen->destroyed(QObject =0);*/
     game->tictacscreen->getPlayerName();
 
 }

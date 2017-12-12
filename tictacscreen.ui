@@ -32,7 +32,40 @@
     <layout class="QVBoxLayout" name="verticalLayout_3"/>
    </item>
    <item row="0" column="4">
-    <layout class="QVBoxLayout" name="verticalLayout"/>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="labeltext1">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labeltext3">
+       <property name="styleSheet">
+        <string notr="true">background-color:red;
+border-radius: 15px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="labeltext2">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="1" column="4">
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -51,7 +84,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
-background-color:red;
+background-color:white;
 </string>
        </property>
        <property name="text">
@@ -74,7 +107,7 @@ background-color:red;
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
-background-color:red;
+background-color:white;
 </string>
        </property>
        <property name="text">
@@ -295,7 +328,7 @@ background-color:white;</string>
    <item row="3" column="0">
     <widget class="QLabel" name="labelPlayerOneScore">
      <property name="styleSheet">
-      <string notr="true">background-color:red;
+      <string notr="true">background-color:white;
 </string>
      </property>
      <property name="text">
@@ -306,21 +339,21 @@ background-color:white;</string>
    <item row="3" column="1">
     <widget class="QLCDNumber" name="PlayerOnelcdNumber">
      <property name="styleSheet">
-      <string notr="true">background-color:red;</string>
+      <string notr="true">background-color:white;</string>
      </property>
     </widget>
    </item>
    <item row="3" column="4">
     <widget class="QLCDNumber" name="PlayerTwolcdNumber">
      <property name="styleSheet">
-      <string notr="true">background-color:red;</string>
+      <string notr="true">background-color:white;</string>
      </property>
     </widget>
    </item>
    <item row="3" column="2">
     <widget class="QLabel" name="labelPlayerTwoScore">
      <property name="styleSheet">
-      <string notr="true">background-color:red;</string>
+      <string notr="true">background-color:white;</string>
      </property>
      <property name="text">
       <string/>
@@ -384,7 +417,7 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:	#F0F8FFe;
+
 border-color:red;
 border-radius:5px;</string>
      </property>

@@ -22,6 +22,7 @@ class TicTacScreen : public QWidget
 public:
     explicit TicTacScreen(QWidget *parent = 0);
     ~TicTacScreen();
+    Ui::TicTacScreen *ui;
 
     QString whoseTurn;
     //qint8 result;
@@ -63,13 +64,14 @@ public:
     qint8 getPlayerTwoCount() const;
     void setPlayerTwoCount(const qint8 &value);
 
+    void playerChanceHighlighterIf_O();
+    void playerChanceHighlighterIf_X();
 signals:
 
     void setWinPlayer(QString a);
 
 
 private:
-    Ui::TicTacScreen *ui;
 
     void winner();
 

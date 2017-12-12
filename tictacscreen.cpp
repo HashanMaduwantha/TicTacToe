@@ -15,6 +15,10 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     setWindowTitle("Tic Tac Game");
     setWindowIcon(QIcon(":/images/smileImoji.png"));
 
+    ui->labeltext1->setText("If name is");
+    ui->labeltext2->setText("its your turn");
+
+    //game->mainmenuScreen->closeEvent(CloseWindow());
     whoseTurn="X";
     PlayerOne="Player One";
     PlayerTwo="Player Two";
@@ -27,7 +31,11 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
 
 TicTacScreen::~TicTacScreen()
 {
+    //delete game->mainmenuScreen->ui;
+    connect(this,SIGNAL(destroyed(QObject*)),game->mainmenuScreen,SLOT(close()));
+    delete game->winnerscreen;
     delete ui;
+
 
 }
 
@@ -40,6 +48,18 @@ qint8 TicTacScreen::getPlayerTwoCount() const
 void TicTacScreen::setPlayerTwoCount(const qint8 &value)
 {
     PlayerTwoCount = value;
+}
+
+void TicTacScreen::playerChanceHighlighterIf_O()
+{
+    ui->labelPlayerOneScore->setStyleSheet("background-color:white");
+    ui->labelPlayerTwoScore->setStyleSheet("background-color:red");
+}
+
+void TicTacScreen::playerChanceHighlighterIf_X()
+{
+    ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
+    ui->labelPlayerOneScore->setStyleSheet("background-color:red");
 }
 
 qint8 TicTacScreen::getPlayerOneCount() const
@@ -129,13 +149,16 @@ void TicTacScreen::DetermineWhoseTurn()
     {
 
         setWhoseTurn("O");
-        //ui->labelPlayerOneScore->styleSheet("background-color:red;");
+        //ui->labelPlayerOneScore->setStyleSheet("background-color:red");
     }
     else
     {
 
         setWhoseTurn("X");
+        //ui->labelPlayerOneScore->setStyleSheet("background-color:red");
     }
+//    ui->labelPlayerOneScore->setStyleSheet("background-color:blue");
+//    ui->labelPlayerOneScore->setStyleSheet("background-color:blue");
 }
 
 //Winning outcomes are checked using posibilities
@@ -313,6 +336,9 @@ void TicTacScreen::ResetGame()
     ui->Button8->setText("");
     ui->Button9->setText("");
 
+    ui->labelPlayerOneScore->setStyleSheet("background-color:white");
+    ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
+
     setScore();
 
 }
@@ -328,13 +354,14 @@ void TicTacScreen::winner()
 //Tic Tac game screen button slots are below here
 void TicTacScreen::on_Button1_clicked()
 {
+
     ui->Button1->setText(getWhoseTurn());
     if(whoseTurn=="X")
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::red);
-
         ui->Button1->setPalette(*palette1);
+        playerChanceHighlighterIf_O();
 
     }
     else
@@ -342,6 +369,9 @@ void TicTacScreen::on_Button1_clicked()
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button1->setPalette(*palette1);
+//        ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
+//        ui->labelPlayerOneScore->setStyleSheet("background-color:red");
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -358,13 +388,14 @@ void TicTacScreen::on_Button2_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button2->setPalette(*palette1);
-
+         playerChanceHighlighterIf_O();
     }
     else
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button2->setPalette(*palette1);
+         playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -381,13 +412,14 @@ void TicTacScreen::on_Button3_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button3->setPalette(*palette1);
-
+        playerChanceHighlighterIf_O();
     }
     else
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button3->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -404,6 +436,7 @@ void TicTacScreen::on_Button4_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button4->setPalette(*palette1);
+        playerChanceHighlighterIf_O();
 
     }
     else
@@ -411,6 +444,7 @@ void TicTacScreen::on_Button4_clicked()
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button4->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -427,13 +461,14 @@ void TicTacScreen::on_Button5_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button5->setPalette(*palette1);
-
+        playerChanceHighlighterIf_O();
     }
     else
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button5->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -450,13 +485,14 @@ void TicTacScreen::on_Button6_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button6->setPalette(*palette1);
-
+        playerChanceHighlighterIf_O();
     }
     else
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button6->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -473,6 +509,7 @@ void TicTacScreen::on_Button7_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button7->setPalette(*palette1);
+        playerChanceHighlighterIf_O();
 
     }
     else
@@ -480,6 +517,7 @@ void TicTacScreen::on_Button7_clicked()
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button7->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -496,6 +534,7 @@ void TicTacScreen::on_Button8_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button8->setPalette(*palette1);
+        playerChanceHighlighterIf_O();
 
     }
     else
@@ -503,6 +542,7 @@ void TicTacScreen::on_Button8_clicked()
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button8->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -519,13 +559,14 @@ void TicTacScreen::on_Button9_clicked()
         palette1->setColor(QPalette::ButtonText,Qt::red);
 
         ui->Button9->setPalette(*palette1);
-
+        playerChanceHighlighterIf_O();
     }
     else
     {
         QPalette *palette1 = new QPalette();
         palette1->setColor(QPalette::ButtonText,Qt::blue);
         ui->Button9->setPalette(*palette1);
+        playerChanceHighlighterIf_X();
     }
 
     DetermineWhoseTurn();
@@ -558,6 +599,9 @@ void TicTacScreen::on_NewGameButton_clicked()
 
     setPlayerOneCount(0);
     setPlayerTwoCount(0);
+
+    ui->labelPlayerOneScore->setStyleSheet("background-color:white");
+    ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
 
     ui->PlayerOnelcdNumber->display(getPlayerOneCount());
     ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
