@@ -1,10 +1,6 @@
 #include "gamecontroller.h"
 #include <QDebug>
 
-//#include <QSplashScreen>
-//#include<QTimer>
-//#include <QMovie>
-
 GameController::GameController()
 {
    // Start();
@@ -12,33 +8,19 @@ GameController::GameController()
 
 void GameController::Start()
 {
-//    QSplashScreen *splash=new QSplashScreen;
-//        splash->setPixmap(QPixmap(":/images/originalWelcomeScreen.PNG"));
-//        splash->show();
-//        QTimer::singleShot(2500,splash,SLOT(close()));
-        //QTimer::singleShot(2500,,SLOT(show()));
 
-
-
+//MainMenu class instance is created
     mainmenuScreen = new MainMenu();
+
+//TicTacScreen class instance is created
     tictacscreen = new TicTacScreen();
+
+//WinnerScreen class is instance is created
     winnerscreen = new WinnerScreen();
-//
-//    movie = new QMovie(":/gif/tictacGIF.gif");
-//
-
+//MainMenu screen is displayed
     mainmenuScreen->show();
-    qDebug() << "winner is";
-    qDebug() << tictacscreen->WinnerPlayer;
-    //connect(tictacscreen,SIGNAL(setWinName(QString)),winnerscreen,SLOT(AddingWinner()));
-//connect()
-    //tictacscreen->getWinName();
-//    winnerscreen->
-    //connect(tictacscreen,SIGNAL())
-    //if(()
-    //mainmenuScreen->on_PlayButton_clicked();
+    qDebug() << "MainMenuOpens";
 
-    //tictacscreen->getPlayerName();
 
 
 }

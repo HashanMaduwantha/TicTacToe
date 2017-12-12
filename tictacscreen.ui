@@ -20,7 +20,9 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#00ff80;</string>
+   <string notr="true">background-color:#80dfff;
+
+</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="spacing">
@@ -42,6 +44,11 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
 background-color:red;
@@ -59,6 +66,11 @@ background-color:red;
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
@@ -186,7 +198,7 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:white;</string>
+background-color:	#F0F8FF;</string>
      </property>
      <property name="text">
       <string/>
@@ -215,7 +227,7 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:white;</string>
+background-color:	#F0F8EE;</string>
      </property>
      <property name="text">
       <string/>
@@ -282,19 +294,34 @@ background-color:white;</string>
    </item>
    <item row="3" column="0">
     <widget class="QLabel" name="labelPlayerOneScore">
+     <property name="styleSheet">
+      <string notr="true">background-color:red;
+</string>
+     </property>
      <property name="text">
       <string/>
      </property>
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QLCDNumber" name="PlayerOnelcdNumber"/>
+    <widget class="QLCDNumber" name="PlayerOnelcdNumber">
+     <property name="styleSheet">
+      <string notr="true">background-color:red;</string>
+     </property>
+    </widget>
    </item>
    <item row="3" column="4">
-    <widget class="QLCDNumber" name="PlayerTwolcdNumber"/>
+    <widget class="QLCDNumber" name="PlayerTwolcdNumber">
+     <property name="styleSheet">
+      <string notr="true">background-color:red;</string>
+     </property>
+    </widget>
    </item>
    <item row="3" column="2">
     <widget class="QLabel" name="labelPlayerTwoScore">
+     <property name="styleSheet">
+      <string notr="true">background-color:red;</string>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -357,7 +384,9 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:white;</string>
+background-color:	#F0F8FFe;
+border-color:red;
+border-radius:5px;</string>
      </property>
      <property name="text">
       <string/>

@@ -2,6 +2,7 @@
     <qresource prefix="/images">
         <file>originalWelcomeScreen.PNG</file>
         <file>smileImoji.png</file>
+        <file>backgroundScreen.jpg</file>
     </qresource>
     <qresource prefix="/gif">
         <file>tictacGIF.gif</file>

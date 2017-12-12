@@ -11,23 +11,12 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    QSplashScreen *splash=new QSplashScreen;
-//    splash->setPixmap(QPixmap(":/images/originalWelcomeScreen.PNG"));
-//    splash->show();
 
+//GameController is started!
     game = new GameController();
     game->Start();
 
-
     //MainMenu w;
-
-//    QTimer::singleShot(2500,splash,SLOT(close()));
-//    QTimer::singleShot(2500,&game,SLOT(show()));
-
-
-
-    //delete splash;
-
     //w.show();
 
     return a.exec();

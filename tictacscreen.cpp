@@ -12,8 +12,8 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     ui(new Ui::TicTacScreen)
 {
     ui->setupUi(this);
-
-
+    setWindowTitle("Tic Tac Game");
+    setWindowIcon(QIcon(":/images/smileImoji.png"));
 
     whoseTurn="X";
     PlayerOne="Player One";
@@ -28,11 +28,10 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
 TicTacScreen::~TicTacScreen()
 {
     delete ui;
-    //connect(game->tictacscreen,SIGNAL(destroyed(QObject*)),game->mainmenuScreen,SLOT(close()));
-    //qApp->quit();
-    //QCoreApplication::quit();
+
 }
 
+//Setters and Getters of the tictacScreen class
 qint8 TicTacScreen::getPlayerTwoCount() const
 {
     return PlayerTwoCount;
@@ -94,19 +93,21 @@ void TicTacScreen::setWinnerPlayer(const QString &value)
 }
 
 
-
+//Use to get Player names from the players
+           //set them to variables
+           //add them to display in UI
 void TicTacScreen::getPlayerName()
 {
     bool ok;
-    QString a=QInputDialog::getText(this,tr("Name Please"),tr("Player One Name:"),
+    PlayerOne=QInputDialog::getText(this,tr("Name Please"),tr("'X' User Name:"),
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
-    setPlayerOne(a);
-    QString b=QInputDialog::getText(this,tr("Name Please"),tr("Player Two Name:"),
-                                    QLineEdit::Normal,QDir::home().dirName(),&ok);
-    setPlayerTwo(b);
 
-    qDebug() << a;
-    qDebug() << b;
+    PlayerTwo=QInputDialog::getText(this,tr("Name Please"),tr("'O' User Name:"),
+                                    QLineEdit::Normal,QDir::home().dirName(),&ok);
+
+
+    qDebug() << "Player One Name:" +PlayerOne;
+    qDebug() << "Player Two Name:" +PlayerTwo;
 
 
     if(PlayerOne=="")
@@ -114,21 +115,21 @@ void TicTacScreen::getPlayerName()
     if(PlayerTwo=="")
     {   setPlayerTwo("Player Two");  }
 
-    PlayerOne = a;
-    PlayerTwo = b;
 
 
-    ui->labelPlayerOneScore->setText(getPlayerOne());
+    ui->labelPlayerOneScore->setText(PlayerOne);
 
-    ui->labelPlayerTwoScore->setText(getPlayerTwo());
+    ui->labelPlayerTwoScore->setText(PlayerTwo);
 }
 
+//Whose turn is checked and switched
 void TicTacScreen::DetermineWhoseTurn()
 {
     if(whoseTurn=="X")
     {
 
         setWhoseTurn("O");
+        //ui->labelPlayerOneScore->styleSheet("background-color:red;");
     }
     else
     {
@@ -137,6 +138,7 @@ void TicTacScreen::DetermineWhoseTurn()
     }
 }
 
+//Winning outcomes are checked using posibilities
 void TicTacScreen::DetermineIfWin()
 {
     QString btn1Value=ui->Button1->text();
@@ -224,6 +226,7 @@ void TicTacScreen::DetermineIfWin()
 
 }
 
+//Use to display values of PlayerOne,PlayerTwo,PlayerOneCount,PlayerTwoCount in UI
 void TicTacScreen::setScore()
 {
     ui->labelPlayerOneScore->setText(getPlayerOne());
@@ -233,22 +236,23 @@ void TicTacScreen::setScore()
     ui->PlayerOnelcdNumber->display(getPlayerOneCount());
     ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
 
-    if(PlayerOneCount>PlayerTwoCount)
-    {  //winner is PlayerOne
+//    if(PlayerOneCount>PlayerTwoCount)
+//    {  //winner is PlayerOne
 
-        WinnerPlayer = PlayerOne;
-        qDebug() << "inside tictacscreen";
-        qDebug() << WinnerPlayer;
+//        WinnerPlayer = PlayerOne;
 
-    }
-    else
-    { //winner is PlayerTwo
 
-        WinnerPlayer = PlayerTwo;
-    }
+//    }
+//    else
+//    { //winner is PlayerTwo
+
+//        WinnerPlayer = PlayerTwo;
+
+//    }
 
 }
 
+//Winner is implemented ('O' user only)
 void TicTacScreen::Owin()
 {
     WinnerPlayer = PlayerTwo;
@@ -260,17 +264,19 @@ void TicTacScreen::Owin()
 
 }
 
+//Winner is implemented ('X' user only)
 void TicTacScreen::Xwin()
 {
+    WinnerPlayer = PlayerOne;
     qDebug() << "Winner player Xwin is";
     qDebug() << WinnerPlayer;
-    WinnerPlayer = PlayerOne;
     winner();
     PlayerTwoCount++;
     ResetGame();
 
 }
 
+//Used if its a tie game to acknowledge the players
 void TicTacScreen::TieGame()
 {
     QString btn1Value=ui->Button1->text();
@@ -294,6 +300,7 @@ void TicTacScreen::TieGame()
     }
 }
 
+//Use to reset the game variables
 void TicTacScreen::ResetGame()
 {
     ui->Button1->setText("");
@@ -307,18 +314,18 @@ void TicTacScreen::ResetGame()
     ui->Button9->setText("");
 
     setScore();
+
 }
 
 
-
+//Use to pass the WINNER NAME to winnerscreen class and to open the instance of WinnerScreen class
 void TicTacScreen::winner()
 {
-    game->winnerscreen->AddingWinner(WinnerPlayer);
+    game->winnerscreen->setWinner(WinnerPlayer);
     game->winnerscreen->show();
-
-
 }
 
+//Tic Tac game screen button slots are below here
 void TicTacScreen::on_Button1_clicked()
 {
     ui->Button1->setText(getWhoseTurn());
@@ -526,12 +533,15 @@ void TicTacScreen::on_Button9_clicked()
     TieGame();
 }
 
+//Use this button to reset the game variables.
+//Players will be still the same
 void TicTacScreen::on_ResetButton_clicked()
 {
 
     ResetGame();
 }
 
+//Use to start a new game with new players
 void TicTacScreen::on_NewGameButton_clicked()
 {
     ui->Button1->setText("");

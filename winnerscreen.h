@@ -20,7 +20,7 @@ public:
     ~WinnerScreen();
 
 public slots:
-    void AddingWinner(QString winner);
+    void setWinner(QString winner);
 
 private:
     Ui::WinnerScreen *ui;

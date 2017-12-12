@@ -12,7 +12,9 @@ WinnerScreen::WinnerScreen(QWidget *parent) :
 {
     ui->setupUi(this);
     WinnerGIF();
-   // connect(game->tictacscreen,SIGNAL(setWinName()),this,SLOT(AddingWinner()));
+
+    setWindowTitle("Winner");
+    setWindowIcon(QIcon(":/images/smileImoji.png"));
 }
 
 WinnerScreen::~WinnerScreen()
@@ -20,26 +22,20 @@ WinnerScreen::~WinnerScreen()
     delete ui;
 }
 
-void WinnerScreen::AddingWinner(QString winner)
+//Using this method WINNER NAME will be applied to UI of WinnerScreen class
+void WinnerScreen::setWinner(QString winner)
 {
 
     ui->LabelWinPlayer->setText(winner);
-    //game->tictacscreen->getWinnerName()
+
 }
 
+//Using this method GIF on WinnerScreen class is displayed
 void WinnerScreen::WinnerGIF()
 {
     Cmovie=new QMovie(":/gif/giphycongradulations.gif");
     Cmovie->setScaledSize(QSize(375,200));
     ui->labelCongradulations->setMovie(Cmovie);
     Cmovie->start();
-
-//    game->Cmovie->setScaledSize(QSize(375,200));
-//    ui->labelCongradulations->setMovie(game->Cmovie);
-//    game->Cmovie->start();
-
-    //tictac=new TicTacSceen();
-    //tictac->PlayerOne;
-    //ui->LabelWinPlayer->setText();
 }
 

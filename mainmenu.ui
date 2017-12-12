@@ -48,7 +48,7 @@ border-radius: 8px;
 width:140px;
 height:30px;
 
-PlayGameButton::hover{ color :white; }</string>
+</string>
         </property>
         <property name="text">
          <string>Play</string>

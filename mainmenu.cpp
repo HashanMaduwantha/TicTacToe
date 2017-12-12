@@ -10,7 +10,7 @@ MainMenu::MainMenu(QWidget *parent) :
     ui(new Ui::MainMenu)
 {
     ui->setupUi(this);
-    setWindowTitle("Tic Tac Toe");
+    setWindowTitle("Main Menu");
     setWindowIcon(QIcon(":/images/smileImoji.png"));
     MainMenuGif();
 }
@@ -19,12 +19,7 @@ MainMenu::~MainMenu()
 {
     delete ui;
 }
-
-//void MainMenu::on_PlayButton_clicked()
-//{
-
-//}
-
+//Use to show up the GIF in the mainscreen
 void MainMenu::MainMenuGif()
 {
     ui->gifLabel->setMask((new QPixmap(":/gif/tictacGIF.gif"))->mask());
@@ -32,12 +27,13 @@ void MainMenu::MainMenuGif()
     ui->gifLabel->setMovie(movie);
     movie->start();
 
-
-
 }
 
+//Play Game button method is here
+//Use to show up the TicTacScreen class UI
 void MainMenu::on_PlayGameButton_clicked()
 {
     game->tictacscreen->show();
     game->tictacscreen->getPlayerName();
+
 }
