@@ -66,6 +66,7 @@ public:
 
     void playerChanceHighlighterIf_O();
     void playerChanceHighlighterIf_X();
+//    void buttonEnabler();
 signals:
 
     void setWinPlayer(QString a);
@@ -84,17 +85,26 @@ protected:
     //void imagesize();
 
 private slots:
-    void on_Button1_clicked();
-    void on_Button2_clicked();
-    void on_Button3_clicked();
-    void on_Button4_clicked();
-    void on_Button5_clicked();
-    void on_Button6_clicked();
-    void on_Button7_clicked();
-    void on_Button8_clicked();
-    void on_Button9_clicked();
+//    void on_Button1_clicked();
+//    void on_Button2_clicked();
+//    void on_Button3_clicked();
+//    void on_Button4_clicked();
+//    void on_Button5_clicked();
+//    void on_Button6_clicked();
+//    void on_Button7_clicked();
+//    void on_Button8_clicked();
+//    void on_Button9_clicked();
     void on_ResetButton_clicked();
     void on_NewGameButton_clicked();
+    void on_Button1_pressed();
+    void on_Button2_pressed();
+    void on_Button3_pressed();
+    void on_Button4_pressed();
+    void on_Button5_pressed();
+    void on_Button6_pressed();
+    void on_Button7_pressed();
+    void on_Button8_pressed();
+    void on_Button9_pressed();
 };
 
 #endif // TICTACSCREEN_H

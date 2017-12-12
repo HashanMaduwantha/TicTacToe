@@ -20,7 +20,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#00bfa5;
+   <string notr="true">background-color:5C727F;
 
 </string>
   </property>
@@ -28,6 +28,9 @@
    <property name="spacing">
     <number>1</number>
    </property>
+   <item row="2" column="4">
+    <layout class="QVBoxLayout" name="verticalLayout_3"/>
+   </item>
    <item row="0" column="4">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
@@ -43,15 +46,12 @@
      <item>
       <widget class="QLabel" name="labeltext3">
        <property name="styleSheet">
-        <string notr="true">background-color:#757575;
+        <string notr="true">background-color:#41f4b2;
 border-radius: 15px;
 </string>
        </property>
        <property name="text">
         <string/>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -85,7 +85,7 @@ border-radius: 15px;
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
 
-Background-color:#757575;
+Background-color:#41f4b2;
 </string>
        </property>
        <property name="text">
@@ -108,7 +108,7 @@ Background-color:#757575;
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
-background-color:#757575;
+background-color:#41f4b2;
 </string>
        </property>
        <property name="text">
@@ -140,6 +140,35 @@ background-color:#757575;
        <pointsize>36</pointsize>
        <weight>50</weight>
        <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">height:100px;
+width:100px;
+background-color:#4dd0e1;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="Button2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>36</pointsize>
       </font>
      </property>
      <property name="styleSheet">
@@ -210,6 +239,35 @@ background-color:#4dd0e1;</string>
      </property>
     </widget>
    </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="Button6">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>36</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">height:100px;
+width:100px;
+background-color:#4dd0e1;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="1">
     <widget class="QPushButton" name="Button8">
      <property name="sizePolicy">
@@ -239,8 +297,8 @@ background-color:#4dd0e1;</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="Button6">
+   <item row="2" column="0">
+    <widget class="QPushButton" name="Button7">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
@@ -279,42 +337,10 @@ background-color:#4dd0e1;</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QPushButton" name="Button7">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>100</width>
-       <height>100</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>36</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">height:100px;
-width:100px;
-background-color:#4dd0e1;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="2">
-    <widget class="QLabel" name="labelPlayerTwoScore">
+   <item row="3" column="1">
+    <widget class="QLCDNumber" name="PlayerOnelcdNumber">
      <property name="styleSheet">
       <string notr="true">background-color:white;</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
     </widget>
    </item>
@@ -325,44 +351,10 @@ background-color:#4dd0e1;</string>
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
-    <widget class="QLCDNumber" name="PlayerOnelcdNumber">
+   <item row="3" column="2">
+    <widget class="QLabel" name="labelPlayerTwoScore">
      <property name="styleSheet">
       <string notr="true">background-color:white;</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="2">
-    <widget class="QPushButton" name="Button9">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>100</width>
-       <height>100</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>36</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">height:100px;
-width:100px;
-background-color:#4dd0e1;
-
-</string>
      </property>
      <property name="text">
       <string/>
@@ -398,11 +390,8 @@ background-color:#4dd0e1;</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="4">
-    <layout class="QVBoxLayout" name="verticalLayout_3"/>
-   </item>
-   <item row="0" column="1">
-    <widget class="QPushButton" name="Button2">
+   <item row="2" column="2">
+    <widget class="QPushButton" name="Button9">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
@@ -415,6 +404,12 @@ background-color:#4dd0e1;</string>
        <height>100</height>
       </size>
      </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
      <property name="font">
       <font>
        <pointsize>36</pointsize>
@@ -423,7 +418,9 @@ background-color:#4dd0e1;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:#4dd0e1;</string>
+background-color:#4dd0e1;
+
+</string>
      </property>
      <property name="text">
       <string/>

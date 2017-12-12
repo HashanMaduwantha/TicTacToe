@@ -39,7 +39,7 @@ TicTacScreen::~TicTacScreen()
 
 }
 
-//Setters and Getters of the tictacScreen class
+
 qint8 TicTacScreen::getPlayerTwoCount() const
 {
     return PlayerTwoCount;
@@ -53,16 +53,39 @@ void TicTacScreen::setPlayerTwoCount(const qint8 &value)
 void TicTacScreen::playerChanceHighlighterIf_O()
 {
     ui->labelPlayerOneScore->setStyleSheet("background-color:white");
-    ui->labelPlayerTwoScore->setStyleSheet("background-color:red");
+    ui->labelPlayerTwoScore->setStyleSheet("background-color:#41f4b2");
     ui->labeltext3->setText(PlayerTwo);
 }
 
 void TicTacScreen::playerChanceHighlighterIf_X()
 {
     ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
-    ui->labelPlayerOneScore->setStyleSheet("background-color:red");
+    ui->labelPlayerOneScore->setStyleSheet("background-color:#41f4b2");
     ui->labeltext3->setText(PlayerOne);
 }
+
+//void TicTacScreen::buttonEnabler()
+//{
+
+//    ui->Button1->setEnabled(true);
+//    qDebug() << "1";
+//    ui->Button2->setEnabled(true);
+//    qDebug() << "2";
+//    ui->Button3->setEnabled(true);
+//    qDebug() << "3";
+//    ui->Button4->setEnabled(true);
+//    qDebug() << "4";
+//    ui->Button5->setEnabled(true);
+//    qDebug() << "5";
+//    ui->Button6->setEnabled(true);
+//    qDebug() << "6";
+//    ui->Button7->setEnabled(true);
+//    qDebug() << "7";
+//    ui->Button8->setEnabled(true);
+//    qDebug() << "8";
+//    ui->Button9->setEnabled(true);
+//    qDebug() << "9";
+//}
 
 qint8 TicTacScreen::getPlayerOneCount() const
 {
@@ -175,9 +198,6 @@ void TicTacScreen::DetermineIfWin()
     QString btn7Value=ui->Button7->text();
     QString btn8Value=ui->Button8->text();
     QString btn9Value=ui->Button9->text();
-
-
-
 
 
         //Checking whether "X" user has won
@@ -353,228 +373,228 @@ void TicTacScreen::winner()
     game->winnerscreen->show();
 }
 
-//Tic Tac game screen button slots are below here
-void TicTacScreen::on_Button1_clicked()
-{
+////Tic Tac game screen button slots are below here
+//void TicTacScreen::on_Button1_clicked()
+//{
 
-    ui->Button1->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
-        ui->Button1->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
+//    ui->Button1->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
+//        ui->Button1->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
 
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button1->setPalette(*palette1);
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button1->setPalette(*palette1);
 //        ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
 //        ui->labelPlayerOneScore->setStyleSheet("background-color:red");
-        playerChanceHighlighterIf_X();
-    }
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button2_clicked()
-{
-    ui->Button2->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button2_clicked()
+//{
+//    ui->Button2->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button2->setPalette(*palette1);
-         playerChanceHighlighterIf_O();
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button2->setPalette(*palette1);
-         playerChanceHighlighterIf_X();
-    }
+//        ui->Button2->setPalette(*palette1);
+//         playerChanceHighlighterIf_O();
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button2->setPalette(*palette1);
+//         playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button3_clicked()
-{
-    ui->Button3->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button3_clicked()
+//{
+//    ui->Button3->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button3->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button3->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//        ui->Button3->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button3->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button4_clicked()
-{
-    ui->Button4->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button4_clicked()
+//{
+//    ui->Button4->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button4->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
+//        ui->Button4->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
 
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button4->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button4->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button5_clicked()
-{
-    ui->Button5->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button5_clicked()
+//{
+//    ui->Button5->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button5->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button5->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//        ui->Button5->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button5->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button6_clicked()
-{
-    ui->Button6->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button6_clicked()
+//{
+//    ui->Button6->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button6->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button6->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//        ui->Button6->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button6->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button7_clicked()
-{
-    ui->Button7->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button7_clicked()
+//{
+//    ui->Button7->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button7->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
+//        ui->Button7->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
 
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button7->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button7->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button8_clicked()
-{
-    ui->Button8->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button8_clicked()
+//{
+//    ui->Button8->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button8->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
+//        ui->Button8->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
 
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button8->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button8->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
-void TicTacScreen::on_Button9_clicked()
-{
-    ui->Button9->setText(getWhoseTurn());
-    if(whoseTurn=="X")
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::red);
+//void TicTacScreen::on_Button9_clicked()
+//{
+//    ui->Button9->setText(getWhoseTurn());
+//    if(whoseTurn=="X")
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::red);
 
-        ui->Button9->setPalette(*palette1);
-        playerChanceHighlighterIf_O();
-    }
-    else
-    {
-        QPalette *palette1 = new QPalette();
-        palette1->setColor(QPalette::ButtonText,Qt::blue);
-        ui->Button9->setPalette(*palette1);
-        playerChanceHighlighterIf_X();
-    }
+//        ui->Button9->setPalette(*palette1);
+//        playerChanceHighlighterIf_O();
+//    }
+//    else
+//    {
+//        QPalette *palette1 = new QPalette();
+//        palette1->setColor(QPalette::ButtonText,Qt::blue);
+//        ui->Button9->setPalette(*palette1);
+//        playerChanceHighlighterIf_X();
+//    }
 
-    DetermineWhoseTurn();
-    DetermineIfWin();
-    TieGame();
-}
+//    DetermineWhoseTurn();
+//    DetermineIfWin();
+//    TieGame();
+//}
 
 //Use this button to reset the game variables.
 //Players will be still the same
@@ -607,5 +627,311 @@ void TicTacScreen::on_NewGameButton_clicked()
 
     ui->PlayerOnelcdNumber->display(getPlayerOneCount());
     ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
+
+
     getPlayerName();
+}
+
+
+
+void TicTacScreen::on_Button1_pressed()
+{
+
+
+    QString value = ui->Button1->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button1->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button1->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button1->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button1->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button2_pressed()
+{
+
+    QString value = ui->Button2->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button2->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button2->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button2->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button2->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button3_pressed()
+{
+
+    QString value = ui->Button3->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button3->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button3->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button3->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button3->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button4_pressed()
+{
+
+    QString value = ui->Button4->text();
+//    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button4->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button4->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button4->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button4->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button5_pressed()
+{
+
+    QString value = ui->Button5->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button5->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button5->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button5->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button5->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button6_pressed()
+{
+
+    QString value = ui->Button6->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button6->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button6->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button6->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button6->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+
+
+
+//    ui->Button6->setEnabled(false);
+}
+
+void TicTacScreen::on_Button7_pressed()
+{
+
+    QString value = ui->Button7->text();
+//    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button7->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button7->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button7->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button7->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button8_pressed()
+{
+
+    QString value = ui->Button8->text();
+    qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button8->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button8->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button8->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button8->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
+}
+
+void TicTacScreen::on_Button9_pressed()
+{
+
+    QString value = ui->Button9->text();
+    //qDebug()<< value;
+    if(value == "" || value.isEmpty() ){
+        qDebug() << value;
+        if(whoseTurn=="X")
+        {
+            ui->Button9->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::red);
+
+            ui->Button9->setPalette(*palette1);
+            playerChanceHighlighterIf_O();
+        }
+        else if (whoseTurn=="O")
+        {
+            ui->Button9->setText(getWhoseTurn());
+            QPalette *palette1 = new QPalette();
+            palette1->setColor(QPalette::ButtonText,Qt::blue);
+            ui->Button9->setPalette(*palette1);
+            playerChanceHighlighterIf_X();
+        }
+
+        DetermineWhoseTurn();
+        qDebug() << "turn is : " + whoseTurn;
+        DetermineIfWin();
+        TieGame();
+
+    }
 }
