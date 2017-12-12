@@ -231,7 +231,7 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:	#F0F8FF;</string>
+background-color:white;</string>
      </property>
      <property name="text">
       <string/>
@@ -260,7 +260,7 @@ background-color:	#F0F8FF;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
-background-color:	#F0F8EE;</string>
+background-color:white;</string>
      </property>
      <property name="text">
       <string/>
@@ -417,9 +417,10 @@ background-color:white;</string>
      <property name="styleSheet">
       <string notr="true">height:100px;
 width:100px;
+background-color:white;
 
-border-color:red;
-border-radius:5px;</string>
+
+</string>
      </property>
      <property name="text">
       <string/>

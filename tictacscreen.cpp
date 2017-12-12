@@ -15,8 +15,8 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     setWindowTitle("Tic Tac Game");
     setWindowIcon(QIcon(":/images/smileImoji.png"));
 
-    ui->labeltext1->setText("If name is");
-    ui->labeltext2->setText("its your turn");
+    ui->labeltext1->setText("If its RED\nIts your turn");
+
 
     //game->mainmenuScreen->closeEvent(CloseWindow());
     whoseTurn="X";
@@ -54,12 +54,14 @@ void TicTacScreen::playerChanceHighlighterIf_O()
 {
     ui->labelPlayerOneScore->setStyleSheet("background-color:white");
     ui->labelPlayerTwoScore->setStyleSheet("background-color:red");
+    ui->labeltext3->setText(PlayerTwo);
 }
 
 void TicTacScreen::playerChanceHighlighterIf_X()
 {
     ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
     ui->labelPlayerOneScore->setStyleSheet("background-color:red");
+    ui->labeltext3->setText(PlayerOne);
 }
 
 qint8 TicTacScreen::getPlayerOneCount() const
