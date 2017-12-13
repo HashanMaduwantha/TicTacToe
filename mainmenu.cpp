@@ -12,23 +12,13 @@ MainMenu::MainMenu(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("Main Menu");
     setWindowIcon(QIcon(":/images/smileImoji.png"));
+
+//    QPalette* palette1 = new QPalette();
+//        palette1->setColor(QPalette::Button,Qt::blue);
+//    ui->PlayGameButton->palette(palette1);
+
     MainMenuGif();
 
-//    this->setStyleSheet("{background-image: url(:/images/bg1.jpg);}");
-//    QPixmap pixmap;
-//    pixmap.load(":/images/bg1.jpg");
-//    QPainter paint(this);
-//    int widWidth = this->ui->centralWidget->width();
-//    int widHeight = this->ui->centralWidget->height();
-//    pixmap = pixmap.scaled(widWidth, widHeight, Qt::KeepAspectRatioByExpanding);
-//    paint.drawPixmap(0, 0, pixmap);
-////    QWidget::paintEvent(pe);
-///
-    QPixmap bkgnd(":/images/bg1.jpg");
-    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Background, bkgnd);
-    this->setPalette(palette);
 }
 
 MainMenu::~MainMenu()
@@ -45,12 +35,21 @@ void MainMenu::MainMenuGif()
 
 }
 
+void MainMenu::wallpaper()
+{
+    QPixmap pic(":/images/bg1.jpg");
+    pic = pic.scaled(this->size(), Qt::IgnoreAspectRatio);
+    QPalette palette;
+    palette.setBrush(QPalette::Background, pic);
+    this->setPalette(palette);
+}
+
 //Play Game button method is here
 //Use to show up the TicTacScreen class UI
 void MainMenu::on_PlayGameButton_clicked()
 {
     game->tictacscreen->show();
-    delete game->mainmenuScreen;/*game->mainmenuScreen->destroyed(QObject =0);*/
+    delete game->mainmenuScreen;
     game->tictacscreen->getPlayerName();
 
 }
