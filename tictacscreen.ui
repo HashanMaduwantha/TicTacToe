@@ -20,7 +20,8 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#00bfa5;
+   <string notr="true">background-color:#116ACC;
+
 
 </string>
   </property>
@@ -43,7 +44,7 @@
      <item>
       <widget class="QLabel" name="labeltext3">
        <property name="styleSheet">
-        <string notr="true">background-color:#757575;
+        <string notr="true">background-color:#41f4b2;
 border-radius: 15px;
 </string>
        </property>
@@ -85,7 +86,7 @@ border-radius: 15px;
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
 
-Background-color:#757575;
+Background-color:	#00b0ff;
 </string>
        </property>
        <property name="text">
@@ -108,7 +109,7 @@ Background-color:#757575;
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 25px;
-background-color:#757575;
+background-color:#00b0ff;
 </string>
        </property>
        <property name="text">

@@ -34,7 +34,9 @@
      </property>
      <property name="font">
       <font>
+       <family>Palatino Linotype</family>
        <pointsize>16</pointsize>
+       <italic>true</italic>
       </font>
      </property>
      <property name="text">
@@ -55,7 +57,9 @@
      </property>
      <property name="font">
       <font>
+       <family>Palatino Linotype</family>
        <pointsize>12</pointsize>
+       <italic>true</italic>
       </font>
      </property>
      <property name="text">

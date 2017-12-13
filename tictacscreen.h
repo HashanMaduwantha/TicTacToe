@@ -66,7 +66,8 @@ public:
 
     void playerChanceHighlighterIf_O();
     void playerChanceHighlighterIf_X();
-//    void buttonEnabler();
+
+
 signals:
 
     void setWinPlayer(QString a);

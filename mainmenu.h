@@ -7,6 +7,7 @@
 #include <QMovie>
 #include <QBitmap>
 #include <QIcon>
+#include <QPainter>
 
 
 
