@@ -94,10 +94,12 @@
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius: 8px;
-background-color:red;
-width:100px;
-height:25px;</string>
+        <string notr="true">
+
+
+ QPushButton#pushButton { background-color: #00b0ff; border-radius:8px; width:100px; height:25px; }
+ QPushButton#pushButton:hover:!pressed{ background-color:#41f4b2 } 
+QPushButton#pushButton:hover { background-color: }</string>
        </property>
        <property name="text">
         <string>OK</string>
