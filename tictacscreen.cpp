@@ -16,7 +16,7 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     setWindowIcon(QIcon(":/images/smileImoji.png"));
 
     ui->labeltext1->setText("Its your turn");
-
+    ui->labeltext1->setStyleSheet("QLabel { color :#41f4b2; }");
 
     //game->mainmenuScreen->closeEvent(CloseWindow());
     whoseTurn="X";
@@ -123,10 +123,10 @@ void TicTacScreen::setWinnerPlayer(const QString &value)
 void TicTacScreen::getPlayerName()
 {
     bool ok;
-    PlayerOne=QInputDialog::getText(this,tr("Name Please"),tr("'X' User Name:"),
+    PlayerOne=QInputDialog::getText(this,tr("Player One"),tr("'X' User Name:"),
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
 
-    PlayerTwo=QInputDialog::getText(this,tr("Name Please"),tr("'O' User Name:"),
+    PlayerTwo=QInputDialog::getText(this,tr("Player Two"),tr("'O' User Name:"),
                                     QLineEdit::Normal,QDir::home().dirName(),&ok);
 
 
@@ -260,19 +260,6 @@ void TicTacScreen::setScore()
     ui->PlayerOnelcdNumber->display(getPlayerOneCount());
     ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
 
-//    if(PlayerOneCount>PlayerTwoCount)
-//    {  //winner is PlayerOne
-
-//        WinnerPlayer = PlayerOne;
-
-
-//    }
-//    else
-//    { //winner is PlayerTwo
-
-//        WinnerPlayer = PlayerTwo;
-
-//    }
 
 }
 

@@ -33,6 +33,9 @@
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="labeltext1">
+       <property name="styleSheet">
+        <string notr="true">font-color:#41f4b2;</string>
+       </property>
        <property name="text">
         <string/>
        </property>
