@@ -346,7 +346,8 @@ void TicTacScreen::winner()
 void TicTacScreen::on_ResetButton_clicked()
 {
 
-    ResetGame();
+
+  ResetGame();
 }
 
 //Use to start a new game with new players
