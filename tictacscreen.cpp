@@ -18,7 +18,7 @@ TicTacScreen::TicTacScreen(QWidget *parent) :
     ui->labeltext1->setText("Its your turn");
     ui->labeltext1->setStyleSheet("QLabel { color :#41f4b2; }");
 
-    //game->mainmenuScreen->closeEvent(CloseWindow());
+
     whoseTurn="X";
     PlayerOne="Player One";
     PlayerTwo="Player Two";

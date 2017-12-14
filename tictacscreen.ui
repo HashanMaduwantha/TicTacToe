@@ -87,9 +87,15 @@ border-radius: 15px;
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius: 25px;
+        <string notr="true">
+ QPushButton#NewGameButton { background-color: #00b0ff; border-radius:25px; } QPushButton#NewGameButton:hover:!pressed{ background-color:#41f4b2 } QPushButton#NewGameButton:hover { background-color: }
 
-Background-color:	#00b0ff;
+
+
+
+
+
+
 </string>
        </property>
        <property name="text">
@@ -111,9 +117,7 @@ Background-color:	#00b0ff;
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">border-radius: 25px;
-background-color:#00b0ff;
-</string>
+        <string notr="true"> QPushButton#ResetButton { background-color: #00b0ff; border-radius:25px; } QPushButton#ResetButton:hover:!pressed{ background-color:#41f4b2 } QPushButton#ResetButton:hover { background-color: }</string>
        </property>
        <property name="text">
         <string>Reset Screen</string>

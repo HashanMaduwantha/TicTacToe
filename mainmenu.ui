@@ -17,10 +17,7 @@
    <string>MainMenu</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-
-
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -46,10 +43,9 @@
          <bool>true</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color:#00b0ff;
-border-radius: 8px;
-width:140px;
-height:30px;
+         <string notr="true">
+
+QPushButton#PlayGameButton { background-color:#00b0ff; border-radius:8px; width:140px; height:30px; } QPushButton#PlayGameButton:hover:!pressed{ background-color:#41f4b2 } QPushButton#PlayGameButton:hover { background-color: }
 
 </string>
         </property>
