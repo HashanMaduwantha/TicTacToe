@@ -14,7 +14,8 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#80dfff;</string>
+   <string notr="true">background-color:#116ACC;
+color:#80dfff</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -38,6 +39,9 @@
        <pointsize>16</pointsize>
        <italic>true</italic>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:#80dfff</string>
      </property>
      <property name="text">
       <string>YOU WON THE GAME</string>
@@ -63,7 +67,7 @@
       </font>
      </property>
      <property name="text">
-      <string>sdgsg</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -99,7 +103,7 @@
 
  QPushButton#pushButton { background-color: #00b0ff; border-radius:8px; width:100px; height:25px; }
  QPushButton#pushButton:hover:!pressed{ background-color:#41f4b2 } 
-QPushButton#pushButton:hover { background-color: }</string>
+QPushButton#pushButton:hover { color:black }</string>
        </property>
        <property name="text">
         <string>OK</string>

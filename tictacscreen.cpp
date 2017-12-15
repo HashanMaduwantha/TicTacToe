@@ -270,7 +270,7 @@ void TicTacScreen::Owin()
     qDebug() << "Winner player Owin is";
     qDebug() << WinnerPlayer;
     winner();
-    PlayerOneCount++;
+    PlayerTwoCount++;
     ResetGame();
 
 }
@@ -282,7 +282,7 @@ void TicTacScreen::Xwin()
     qDebug() << "Winner player Xwin is";
     qDebug() << WinnerPlayer;
     winner();
-    PlayerTwoCount++;
+    PlayerOneCount++;
     ResetGame();
 
 }
