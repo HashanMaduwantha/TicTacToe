@@ -326,7 +326,8 @@ void TicTacScreen::ResetGame()
 
     ui->labelPlayerOneScore->setStyleSheet("background-color:white");
     ui->labelPlayerTwoScore->setStyleSheet("background-color:white");
-
+    ui->labeltext3->setText(PlayerOne);
+    whoseTurn="X";
     setScore();
 
 }
@@ -374,7 +375,7 @@ void TicTacScreen::on_NewGameButton_clicked()
     ui->PlayerOnelcdNumber->display(getPlayerOneCount());
     ui->PlayerTwolcdNumber->display(getPlayerTwoCount());
 
-
+    whoseTurn="X";
     getPlayerName();
 }
 

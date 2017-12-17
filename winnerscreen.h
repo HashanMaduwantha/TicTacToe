@@ -29,7 +29,7 @@ private:
 
 
     QMovie *Cmovie;
-    //TicTacScreen *tictac;
+
 
 
     void WinnerGIF();

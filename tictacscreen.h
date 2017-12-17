@@ -25,7 +25,7 @@ public:
     Ui::TicTacScreen *ui;
 
     QString whoseTurn;
-    //qint8 result;
+
     QString PlayerOne;
     QString PlayerTwo;
     qint8 PlayerOneCount;
@@ -79,11 +79,11 @@ private:
 
 
 protected:
-    //void paintEvent(QPaintEvent *e);
+
     QPalette *palette1;
-    //QMessageBox msgBox;
+
     QPixmap *pixmap;
-    //void imagesize();
+
 
 private slots:
 

@@ -26,7 +26,7 @@ public:
 
     void MainMenuGif();
     void wallpaper();
-//    void on_PlayButton_clicked();
+
 private slots:
 
 

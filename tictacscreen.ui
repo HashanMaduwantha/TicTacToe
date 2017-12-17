@@ -20,7 +20,11 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:#116ACC;
+   <string notr="true">
+QWidget { background-color:#116ACC;  }
+
+
+QLineEdit { background-color: ; color:white; }
 
 
 </string>

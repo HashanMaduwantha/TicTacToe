@@ -11,11 +11,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-//    QPixmap bkgnd(":/images/bg1.jpg");
-//    bkgnd = bkgnd.scaled(game->mainmenuScreen->size(), Qt::IgnoreAspectRatio);
-//    QPalette palette;
-//    palette.setBrush(QPalette::Background, bkgnd);
-//    game->mainmenuScreen->setPalette(palette);
+
 
 
 //GameController is started!
