@@ -24,6 +24,7 @@
 QWidget { background-color:#116ACC;  }
 
 
+QInputDialog { background-color:; color: }
 QLineEdit { background-color: ; color:white; }
 
 
